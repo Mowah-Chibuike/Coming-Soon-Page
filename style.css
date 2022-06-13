@@ -1,0 +1,250 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    font-family: 'Montserrat', sans-serif;
+    color: white;
+    
+}
+
+.main{
+    background: url(images/20220611_142609.jpg) rgba(66, 77, 111, 0.7);
+    background-size: cover;
+    background-blend-mode: multiply;
+    height: 100vh;
+    width: 100vw;
+}
+.logo{
+    height: 38px;
+    width: 90px;
+    margin-left: 10px;
+    margin-right: auto;
+}
+
+.nav{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    height: 60px;
+    width: 100vw;
+}
+.nav ul{
+    list-style-type: none;
+}
+
+.nav ul li{
+    display: inline-block;
+}
+
+.nav ul li a{
+    font-family: 'Raleway', sans-serif;
+    font-weight: 200;
+    font-size: .85em;
+    text-decoration: none;
+    color: #fffefa;
+}
+
+.nav ul li a:hover{
+    color: blue;
+}
+
+#newsletter{
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    width: 100%;
+    height: 100vh;
+    background: rgba(0, 0, 0, 0.9);
+    top: 0;
+    left: 100%;
+    transition: all .5s ease;
+    z-index: 1000;
+}
+#newsletter.show{
+    left: 0;
+}
+#cancel{
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 75px;
+    height: 60px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    padding: 0 23px;
+}
+
+#cancel::before{
+    content: "";
+    position: absolute;
+    width: 30px;
+    height: 2px;
+    background-color: white;
+    transform: rotate(45deg);
+}
+
+#cancel::after{
+    content: "";
+    position: absolute;
+    width: 30px;
+    height: 2px;
+    background-color: white;
+    transform: rotate(-45deg);
+}
+
+.inner-container{
+    background-color: rgb(41, 48, 69);
+    width: 80%;
+    height: 70%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.subscribe-head{
+    margin-bottom: 10px;
+}
+.subscribe-head h2{
+    font-size: 1.25rem;
+}
+
+form{
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px 50px;
+}
+
+form p{
+    font-family: 'Montserrat', sans-serif;
+    font-size: .95em;
+    color: red;
+}
+.inputs{
+    width: 100%;
+    height: auto;
+    margin: 20px;
+}
+#full-name, #email{
+    font-family: 'Montserrat', sans-serif;
+    width: 100%;
+    padding: 8px 10px;
+    border: none;
+    border-radius: 2px;
+    color: white;
+}
+
+#full-name::placeholder, #email::placeholder{
+    color: gray;
+    font-family: 'Montserrat', sans-serif;
+}
+
+.buttons{
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+}
+#subscribe-btn, #reset-btn{
+    font-family: 'Raleway', sans-serif;
+    font-weight: 400;
+    width: 80px;
+    padding: 5px 10px;
+    color: #fffefa;
+    background-color: rgb(117, 136, 196);
+    border: none;
+    border-radius: 3px;
+}
+
+#subscribe-btn{
+    margin-right: 20px;
+}
+.subscribe{
+    margin: 0 20px;
+}
+
+.container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    height: 70vh;
+    text-transform: uppercase;
+}
+
+.container h3{
+    font-size: .75rem;
+    font-weight: 400;
+    letter-spacing: 1px;
+}
+
+.container .first-line{
+    font-size: 2.5rem;
+    font-family: 'Raleway', sans-serif;
+    font-weight: 500;
+    letter-spacing: 2.5px;
+    margin-top: 15px;
+}
+
+.container .second-line{
+    font-size: 2.5rem;
+    font-family: 'Raleway', sans-serif;
+    font-weight: 500;
+    letter-spacing: 2.5px;
+    margin-bottom: 15px;
+}
+
+.social-icons{
+    text-align: center;
+    font-size: .75rem;
+    width: 100%;
+    height: 20vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.social-icons a{
+    color: white;
+    margin-right: 10px;
+}
+
+.social-icons .fa-brands{
+    padding: 10px;
+    width: 2.5rem;
+    border: 2px solid white;
+    border-radius: 50%;
+}
+
+ @media screen and (min-width: 768px) { 
+    .nav{
+       max-width: 95vw;
+       margin: 0 auto;
+   }
+    
+   .nav ul li a{
+       letter-spacing: 1px;
+   }
+
+   .container .first-line{
+        font-size: 3rem;
+   }
+
+   .container .second-line{
+        font-size: 3rem;
+   }
+
+   .inner-container{
+       width: 50%;
+   }
+} 
